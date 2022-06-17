@@ -1,0 +1,71 @@
+{
+  "id": "user",
+  "label": "User",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "Avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "firstname": {
+        "type": "Text",
+        "config": {
+          "label": "Firstname",
+          "placeholder": ""
+        }
+      },
+      "lastname": {
+        "type": "Text",
+        "config": {
+          "label": "Lastname",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "isActive": {
+        "type": "Boolean",
+        "config": {
+          "label": "Is Active",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "dateRegistered": {
+        "type": "Date",
+        "config": {
+          "label": "Date Registered",
+          "placeholder": ""
+        }
+      },
+      "isNewsletterEnabled": {
+        "type": "Boolean",
+        "config": {
+          "label": "Is Newsletter Enabled",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      }
+    }
+  }
+}

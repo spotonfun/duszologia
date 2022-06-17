@@ -1,0 +1,49 @@
+{
+  "id": "settings",
+  "label": "settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": "Name of your blog (e.g. your name)"
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": "Short description of your blog"
+        }
+      },
+      "newsletterDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Newsletter Description",
+          "placeholder": "Text above the sign up form"
+        }
+      },
+      "newsletterDisclaimer": {
+        "type": "Text",
+        "config": {
+          "label": "Newsletter Disclaimer",
+          "placeholder": "Small text below sign up form"
+        }
+      },
+      "profilePicture": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture",
+          "constraint": {
+            "width": 2000,
+            "height": 5000
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

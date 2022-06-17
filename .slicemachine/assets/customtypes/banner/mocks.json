@@ -1,0 +1,25 @@
+{
+  "id": "b740fefd-5d41-47d7-9f3a-652e9f54c92e",
+  "uid": "quibusdam-architecto-neque",
+  "type": "banner",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "In amet labore ad voluptate. Eiusmod dolore fugiat reprehenderit dolor exercitation quis do velit.",
+        "spans": []
+      }
+    ],
+    "Subtitle": [
+      {
+        "type": "paragraph",
+        "text": "Aute ad mollit laboris ea ea ad culpa amet. Proident tempor ad sint commodo deserunt commodo nisi nostrud irure veniam labore veniam ad.",
+        "spans": []
+      }
+    ],
+    "link": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    }
+  }
+}

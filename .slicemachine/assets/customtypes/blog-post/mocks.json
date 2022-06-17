@@ -1,0 +1,18 @@
+{
+  "id": "1d42c76e-ba62-4f3d-95c7-03aa2e643fba",
+  "uid": "veritatis-in-eum",
+  "type": "blog-post",
+  "data": {
+    "featuredImage": {
+      "dimensions": {
+        "width": 2000,
+        "height": 1500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=2000&h=1500&fit=crop"
+    },
+    "title": "maximize strategic e-business",
+    "publishDate": "2016-02-17"
+  }
+}

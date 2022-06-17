@@ -1,0 +1,45 @@
+{
+  "id": "ab02f37e-6130-4dac-95f2-cd66835a11b4",
+  "uid": "perspiciatis-id-harum",
+  "type": "navigation",
+  "data": {
+    "homePageLabel": "architect dynamic methodologies",
+    "links": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "label": "engage synergistic systems"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": "deploy enterprise e-tailers"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": "streamline ubiquitous metrics"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "label": "leverage plug-and-play e-markets"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "label": "exploit turn-key metrics"
+      }
+    ]
+  }
+}
