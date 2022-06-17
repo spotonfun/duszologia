@@ -2,7 +2,7 @@ import react from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-const Layout = ({
+export const Layout = ({
 	navigation,
 	settings,
 	withHeaderDivider,
@@ -23,5 +23,3 @@ const Layout = ({
 		</div>
 	);
 };
-
-export default Layout;
