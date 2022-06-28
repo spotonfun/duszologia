@@ -22,39 +22,44 @@ export const Header = ({
 }) => {
 	// console.log("navigation data label: " + navigation.data.homePageLabel);
 	return (
-		<div className="grid grid-cols-1 justify-items-right gap-20">
-			<nav
-				className="w-full 
-				flex flex-wrap 
-				items-center justify-between py-4
-					 text-gray-500 hover:text-gray-700 focus:text-gray-700,text-bold shadow-lg
+		<nav
+			className="relative 
+					w-full 
+					flex flex-wrap 
+					items-center 
+					justify-between
+				 	py-4
+					 text-gray-500 hover:text-gray-700 focus:text-gray-700 
+					  shadow-lg
 					 navbar navbar-expand-lg navbar-light
 					 "
-			>
-				<div className="container-fluid w-full flex-wrap items-center justify-between px-6">
-					<ul className="navbar-nav flex flex-row pl-0 list-style-none mr-auto ">
-						<NavItem className="nav-item p-2">
-							<PrismicLink href="/">
-								{navigation.data.homePageLabel.label}
-							</PrismicLink>
+		>
+			<div className="container-fluid w-full flex-wrap items-center justify-between px-6">
+				<ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto ">
+					<NavItem className="nav-item p-2">
+						<PrismicLink
+							href="/"
+							className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
+						>
+							{navigation.data.homePageLabel.label}
+						</PrismicLink>
+					</NavItem>
+					{navigation.data?.links.map((item) => (
+						<NavItem key={item.label}>
+							<PrismicLink field={item.link}>{item.label}</PrismicLink>
 						</NavItem>
-						{navigation.data?.links.map((item) => (
-							<NavItem key={item.label}>
-								<PrismicLink field={item.link}>{item.label}</PrismicLink>
-							</NavItem>
-						))}
-					</ul>
-				</div>
-				{withProfile && (
+					))}
+				</ul>
+			</div>
+			{withProfile && (
+				<div className="flex items-center relative">
 					<Profile
 						name={settings.data.name}
 						description={settings.data.description}
 						profilePicture={settings.data.profilePicture}
 					/>
-				)}
-			</nav>
-
-			{withDivider && <HorizontalDivider />}
-		</div>
+				</div>
+			)}
+		</nav>
 	);
 };
