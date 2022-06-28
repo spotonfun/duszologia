@@ -70,7 +70,8 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
 					//withSignUpForm && <SignUpForm settings={settings} />
 				}
 				<div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
-					Proudly published using{" "}
+					Witryna zarządzana przez Duszologia.pl &nbsp;&nbsp;&nbsp; |
+					&nbsp;&nbsp;&nbsp;Published using{" "}
 					<PrismicLink href="https://prismic.io" className="text-slate-700">
 						Prismic
 					</PrismicLink>

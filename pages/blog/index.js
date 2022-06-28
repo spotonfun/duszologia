@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { createClient } from "../prismicio";
-import styles from "../styles/Home.module.css";
+import { createClient } from "../../prismicio";
+import styles from "../../styles/Home.module.css";
 import { Link, RichText } from "prismic-reactjs";
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink } from "@prismicio/react";
