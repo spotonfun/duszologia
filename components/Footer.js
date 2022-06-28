@@ -52,7 +52,7 @@ const SignUpForm = ({ settings }) => {
 					</div>
 					{prismicH.isFilled.richText(settings.data.newsletterDisclaimer) && (
 						<p className="text-center text-xs tracking-tight text-slate-500">
-							<PrismicText field={settings.data.newsletterDisclaimer} />
+							{settings.data.newsletterDisclaimer}
 						</p>
 					)}
 				</div>
@@ -66,7 +66,9 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
 		<Bounded as="footer">
 			<div className="grid grid-cols-1 justify-items-center gap-24">
 				<HorizontalDivider />
-				{withSignUpForm && <SignUpForm settings={settings} />}
+				{
+					//withSignUpForm && <SignUpForm settings={settings} />
+				}
 				<div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
 					Proudly published using{" "}
 					<PrismicLink href="https://prismic.io" className="text-slate-700">

@@ -20,6 +20,7 @@ export const Header = ({
 	navigation,
 	settings,
 }) => {
+	console.log("navigation data label: " + navigation.data.label);
 	return (
 		<Bounded as="header">
 			<div className="grid grid-cols-1 justify-items-center gap-20">
@@ -27,14 +28,12 @@ export const Header = ({
 					<ul className="flex flex-wrap justify-center gap-10">
 						<NavItem>
 							<PrismicLink href="/">
-								<PrismicText field={navigation.data.home.label} />
+								{navigation.data.homePageLabel.label}
 							</PrismicLink>
 						</NavItem>
 						{navigation.data?.links.map((item) => (
-							<NavItem key={prismicH.asText(item.label)}>
-								<PrismicLink field={item.link}>
-									<PrismicText field={itme.label} />
-								</PrismicLink>
+							<NavItem key={item.label}>
+								<PrismicLink field={item.link}>{item.label}</PrismicLink>
 							</NavItem>
 						))}
 					</ul>

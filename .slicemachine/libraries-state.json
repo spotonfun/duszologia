@@ -25,7 +25,7 @@
                     "label": "text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -44,7 +44,12 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Cupidatat dolor ea adipisicing pariatur ipsum Lorem aute mollit fugiat velit voluptate non deserunt sunt ullamco. Labore ut quis reprehenderit aliquip laboris consectetur quis enim cillum veniam.",
+                  "text": "Eu dolor duis excepteur consequat.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Nisi fugiat aute cupidatat eu occaecat ullamco ipsum ut. Cupidatat Lorem sit consequat deserunt deserunt exercitation duis ex cupidatat cillum ullamco occaecat. Officia amet dolore minim pariatur velit cupidatat officia tempor magna nostrud voluptate deserunt in nostrud est.",
                   "spans": []
                 }
               ]
@@ -55,7 +60,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/BlogText/default/preview.png",
+            "width": 800,
+            "height": 48
+          }
+        }
       },
       "contact_form": {
         "library": "slices",

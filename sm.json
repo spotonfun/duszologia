@@ -1,9 +1,7 @@
 {
-  "_latest": "0.3.0",
-  "apiEndpoint": "https://duszologia.prismic.io/api/v2",
-  "libraries": [
-    "@/slices"
-  ],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
-  "framework": "previousNext"
+	"_latest": "0.3.0",
+	"apiEndpoint": "https://duszologia.prismic.io/api/v2",
+	"libraries": ["@/slices"],
+	"localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+	"framework": "previousNext"
 }
