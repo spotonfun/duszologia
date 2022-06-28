@@ -65,16 +65,12 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
 	return (
 		<Bounded as="footer">
 			<div className="grid grid-cols-1 justify-items-center gap-24">
-				<HorizontalDivider />
+				<HorizontalDivider width={0.2} />
 				{
 					//withSignUpForm && <SignUpForm settings={settings} />
 				}
-				<div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
-					Witryna zarządzana przez Duszologia.pl &nbsp;&nbsp;&nbsp; |
-					&nbsp;&nbsp;&nbsp;Published using{" "}
-					<PrismicLink href="https://prismic.io" className="text-slate-700">
-						Prismic
-					</PrismicLink>
+				<div className="mx-auto w-full max-w-3xl text-center justify-items-center align-middle text-xs font-normal tracking-wide text-slate-300">
+					Zaprojektowane przez Duszologia.pl, 2022
 				</div>
 			</div>
 		</Bounded>

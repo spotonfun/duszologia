@@ -9,9 +9,10 @@ export const Layout = ({
 	withProfile,
 	withSignUpForm,
 	children,
+	style,
 }) => {
 	return (
-		<div className="text-slate-700">
+		<div className="text-slate-700" style={style}>
 			<Header
 				withProfile={withProfile}
 				withDivider={withHeaderDivider}

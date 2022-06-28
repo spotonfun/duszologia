@@ -20,13 +20,20 @@ export const Header = ({
 	navigation,
 	settings,
 }) => {
-	console.log("navigation data label: " + navigation.data.label);
+	// console.log("navigation data label: " + navigation.data.homePageLabel);
 	return (
-		<Bounded as="header">
-			<div className="grid grid-cols-1 justify-items-center gap-20">
-				<nav>
-					<ul className="flex flex-wrap justify-center gap-10">
-						<NavItem>
+		<div className="grid grid-cols-1 justify-items-right gap-20">
+			<nav
+				className="w-full 
+				flex flex-wrap 
+				items-center justify-between py-4
+					 text-gray-500 hover:text-gray-700 focus:text-gray-700,text-bold shadow-lg
+					 navbar navbar-expand-lg navbar-light
+					 "
+			>
+				<div className="container-fluid w-full flex-wrap items-center justify-between px-6">
+					<ul className="navbar-nav flex flex-row pl-0 list-style-none mr-auto ">
+						<NavItem className="nav-item p-2">
 							<PrismicLink href="/">
 								{navigation.data.homePageLabel.label}
 							</PrismicLink>
@@ -37,7 +44,7 @@ export const Header = ({
 							</NavItem>
 						))}
 					</ul>
-				</nav>
+				</div>
 				{withProfile && (
 					<Profile
 						name={settings.data.name}
@@ -45,8 +52,9 @@ export const Header = ({
 						profilePicture={settings.data.profilePicture}
 					/>
 				)}
-				{withDivider && <HorizontalDivider />}
-			</div>
-		</Bounded>
+			</nav>
+
+			{withDivider && <HorizontalDivider />}
+		</div>
 	);
 };
