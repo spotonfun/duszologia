@@ -1,36 +1,58 @@
 import Head from "next/head";
 import Image from "next/image";
 import { createClient } from "../../prismicio";
-import styles from "../../styles/Home.module.css";
 import { Link, RichText } from "prismic-reactjs";
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink } from "@prismicio/react";
+import { Layout } from "../../components/Layout";
+import { Bounded } from "../../components/Bounded";
+import BlogPostCard from "../../components/BlogPostCard";
 
 export default function Blog({ page, posts, navigation, settings }) {
 	console.log("page: ", page);
-	console.log("posts: ", posts);
-	// let bkgImgSrc = prismicH.asImageSrc(page.data.backgroundImage);
-	// let bkgClassName =
+	let bkgImgUrl = page.data.backgroundImage.url;
 	return (
-		<div className="container mx-auto">
-			<h1 className="text-3xl font-bold underline">
-				<RichText render={page.data.title} />
-			</h1>
-			<h3 className="text-xl font-bold">
-				page welcome text:
-				<RichText render={page.data.description} />
-			</h3>
-			<br></br>
-			<h2>posts</h2>
-			<ul>
-				{posts.map((post) => (
-					<li key={post.uid}>
-						post: {post.data.title}{" "}
-						<PrismicLink document={post}>link</PrismicLink>
-					</li>
-				))}
-			</ul>
-		</div>
+		<Layout
+			withBackground={true}
+			withProfile={false}
+			navigation={navigation}
+			settings={settings}
+			style={{ backgroundImage: `url(${bkgImgUrl})`, backgroundSize: "cover" }}
+		>
+			<Head>
+				<title>{page.data.title}</title>
+			</Head>
+			<Bounded>
+				<h1 className="text-3xl leading-tight mb-4 pb-4 border-b">
+					{page.data.title}
+				</h1>
+			</Bounded>
+			<Bounded>
+				<p>
+					<RichText render={page.data.description}></RichText>
+				</p>
+			</Bounded>
+			<Bounded>
+				<Bounded size="base" className="">
+					<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+						Artykuły
+					</h3>
+				</Bounded>
+				<Bounded size="base">
+					<div className="flex flex-row justify-start">
+						<ul>
+							{posts.map((post) => (
+								<li key={post.uid}>
+									<BlogPostCard post={post} />
+									post: {post.data.title}{" "}
+									<PrismicLink document={post}>link</PrismicLink>
+								</li>
+							))}
+						</ul>
+					</div>
+				</Bounded>
+			</Bounded>
+		</Layout>
 	);
 }
 

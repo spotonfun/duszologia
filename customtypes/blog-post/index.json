@@ -37,6 +37,13 @@
           "placeholder": "Date the article was published"
         }
       },
+      "incentive": {
+        "type": "Text",
+        "config": {
+          "label": "Incentive",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -3,6 +3,7 @@ import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { Bounded } from "./Bounded";
 import { HorizontalDivider } from "./HorizontalDivider";
+import Image from "next/image";
 
 const Profile = ({ name, description, profilePicture }) => {
 	return <h5>profile here</h5>;
@@ -10,43 +11,68 @@ const Profile = ({ name, description, profilePicture }) => {
 
 const NavItem = ({ children }) => {
 	return (
-		<li className="font-semibold tracking-tight text-slate-800">{children}</li>
+		<li className="font-semibold tracking-tight text-slate-400 pr-4">
+			{children}
+		</li>
 	);
 };
 
 export const Header = ({
-	withDivider = true,
+	withBackground = false,
+	withLogo = true,
 	withProfile = true,
 	navigation,
 	settings,
 }) => {
-	console.log("navigation data label: " + navigation.data.label);
+	// console.log("navigation data label: " + navigation.data.homePageLabel);
+	console.log(settings.data.profilePicture);
 	return (
-		<Bounded as="header">
-			<div className="grid grid-cols-1 justify-items-center gap-20">
-				<nav>
-					<ul className="flex flex-wrap justify-center gap-10">
-						<NavItem>
-							<PrismicLink href="/">
-								{navigation.data.homePageLabel.label}
+		<nav
+			className={
+				withBackground
+					? "bg-transparent relative w-full  flex flex-wrap items-center justify-between py-4 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light "
+					: "bg-transparent relative w-full  flex flex-wrap items-center justify-between py-4 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light"
+			}
+		>
+			<div className="container-fluid w-full flex-wrap items-center justify-between px-6">
+				<ul className="navbar-nav flex flex-row pl-0 list-style-none mr-auto ">
+					<NavItem className="nav-item">
+						<PrismicLink
+							href="/"
+							className={
+								withBackground
+									? "nav-link text-white hover:text-gray-400 focus:text-gray-400 p-0"
+									: "nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
+							}
+						>
+							{navigation.data.homePageLabel.label}
+						</PrismicLink>
+					</NavItem>
+					{navigation.data?.links.map((item) => (
+						<NavItem key={item.label}>
+							<PrismicLink
+								field={item.link}
+								className={
+									withBackground
+										? "nav-link text-white hover:text-gray-400 focus:text-gray-400 p-0"
+										: "nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
+								}
+							>
+								{item.label}
 							</PrismicLink>
 						</NavItem>
-						{navigation.data?.links.map((item) => (
-							<NavItem key={item.label}>
-								<PrismicLink field={item.link}>{item.label}</PrismicLink>
-							</NavItem>
-						))}
-					</ul>
-				</nav>
-				{withProfile && (
+					))}
+				</ul>
+			</div>
+			{withProfile && (
+				<div className="flex items-center relative">
 					<Profile
 						name={settings.data.name}
 						description={settings.data.description}
 						profilePicture={settings.data.profilePicture}
 					/>
-				)}
-				{withDivider && <HorizontalDivider />}
-			</div>
-		</Bounded>
+				</div>
+			)}
+		</nav>
 	);
 };

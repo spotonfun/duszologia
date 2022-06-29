@@ -11,6 +11,7 @@ export const Bounded = ({
 			<div
 				className={clsx(
 					"mx-auto w-full",
+					size === "xsmall" && "max-w-l",
 					size === "small" && "max-w-xl",
 					size === "base" && "max-w-3xl",
 					size === "wide" && "max-w-4xl",

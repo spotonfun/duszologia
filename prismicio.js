@@ -9,21 +9,21 @@ const apiToken = secret.apiToken;
 
 // Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {
-	console.log("linkResolver, doc.type: " + doc.type);
+	console.log("[linkResolver] doc.type: " + doc.type);
 	switch (doc.type) {
 		case "home-page":
-			console.log("HOME-PAGE page type");
+			console.log("[linkResolver] HOME-PAGE page type");
 			return "/";
 		case "blog-post":
-			console.log("BLOG-POST page type");
+			console.log("[linkResolver] BLOG-POST page type");
 			return `/blog/${doc.uid}`;
 		case "blog-main-page":
-			console.log("BLOG-MAIN-PAGE page type");
+			console.log("[linkResolver] BLOG-MAIN-PAGE page type");
 			return `/blog`;
 		// case "page":
 		// 	return `/${doc.uid}`;
 		default:
-			console.log("DEFAULT page type");
+			console.log("[linkResolver] DEFAULT page type");
 			return null;
 	}
 }
