@@ -48,19 +48,42 @@ export default function Home({ page, posts, navigation, settings }) {
 					</h3>
 				</Bounded>
 
-				<div></div>
-				<div>
-					<h2>posts</h2>
-					<ul>
-						{posts.map((post) => (
-							<li key={post.uid}>
-								<BlogPostCard post={post} />
-								post: {post.data.title}{" "}
-								<PrismicLink document={post}>link</PrismicLink>
-							</li>
-						))}
-					</ul>
-				</div>
+				{
+					// Button
+				}
+				<Bounded size="basic" className="text-center">
+					<button
+						type="button"
+						className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+					>
+						<PrismicLink href="/blog">Blog</PrismicLink>
+					</button>
+				</Bounded>
+				{
+					// horizontal divider
+				}
+				<Bounded size="small" className="border-b mx-20">
+					&nbsp;
+				</Bounded>
+
+				<Bounded size="base" className="">
+					<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+						Artykuły
+					</h3>
+				</Bounded>
+				<Bounded size="base">
+					<div className="flex flex-row justify-start">
+						<ul>
+							{posts.map((post) => (
+								<li key={post.uid}>
+									<BlogPostCard post={post} />
+									post: {post.data.title}{" "}
+									<PrismicLink document={post}>link</PrismicLink>
+								</li>
+							))}
+						</ul>
+					</div>
+				</Bounded>
 			</div>
 		</Layout>
 	);

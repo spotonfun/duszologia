@@ -6,18 +6,18 @@ import * as prismicH from "@prismicio/helpers";
 import { PrismicLink } from "@prismicio/react";
 import { Layout } from "../../components/Layout";
 import { Bounded } from "../../components/Bounded";
+import BlogPostCard from "../../components/BlogPostCard";
 
 export default function Blog({ page, posts, navigation, settings }) {
 	console.log("page: ", page);
-	console.log("posts: ", posts);
-	// let bkgImgSrc = prismicH.asImageSrc(page.data.backgroundImage);
-	// let bkgClassName =
+	let bkgImgUrl = page.data.backgroundImage.url;
 	return (
 		<Layout
-			withHeaderDivider={false}
+			withBackground={true}
 			withProfile={false}
 			navigation={navigation}
 			settings={settings}
+			style={{ backgroundImage: `url(${bkgImgUrl})`, backgroundSize: "cover" }}
 		>
 			<Head>
 				<title>{page.data.title}</title>
@@ -33,15 +33,24 @@ export default function Blog({ page, posts, navigation, settings }) {
 				</p>
 			</Bounded>
 			<Bounded>
-				<h2>Artykuły</h2>
-				<ul>
-					{posts.map((post) => (
-						<li key={post.uid}>
-							post: {post.data.title}{" "}
-							<PrismicLink document={post}>link</PrismicLink>
-						</li>
-					))}
-				</ul>
+				<Bounded size="base" className="">
+					<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+						Artykuły
+					</h3>
+				</Bounded>
+				<Bounded size="base">
+					<div className="flex flex-row justify-start">
+						<ul>
+							{posts.map((post) => (
+								<li key={post.uid}>
+									<BlogPostCard post={post} />
+									post: {post.data.title}{" "}
+									<PrismicLink document={post}>link</PrismicLink>
+								</li>
+							))}
+						</ul>
+					</div>
+				</Bounded>
 			</Bounded>
 		</Layout>
 	);
