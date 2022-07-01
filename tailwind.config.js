@@ -4,7 +4,19 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		// fontFamily: {
+		// 	sans: ["Grandstander", "sans-serif"],
+		// 	serif: ["Bitter", "serif"],
+		// },
+		extend: {
+			fontFamily: {
+				mali: ["Mali", "sans-serif"],
+				grandstander: ["Grandstander", "sans-serif"],
+				bitter: ["Bitter", "serif"],
+				scopeOne: ["Scope One", "serif"],
+				spectral: ["Spectral", "serif"],
+			},
+		},
 	},
 	plugins: [],
 };

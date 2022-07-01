@@ -1,15 +1,8 @@
 {
-  "id": "fc104432-0fdc-4eee-8117-67e4298d0cd0",
-  "uid": "amet-provident-quo",
+  "id": "1b4340a3-8ff7-4a26-8071-ed8c961e707b",
+  "uid": "recusandae-et-porro",
   "type": "home-page",
   "data": {
-    "title": [
-      {
-        "type": "paragraph",
-        "text": "Cupidatat cillum ex non ea excepteur pariatur voluptate commodo aliqua ex est est irure voluptate. Do reprehenderit cillum pariatur dolor non nisi commodo. Eu officia eu ut ut commodo enim pariatur reprehenderit laboris culpa.",
-        "spans": []
-      }
-    ],
     "backgroundImage": {
       "dimensions": {
         "width": 900,
@@ -17,18 +10,19 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
     },
     "welcomeText": [
       {
         "type": "paragraph",
-        "text": "Minim proident voluptate dolor reprehenderit sunt excepteur ex reprehenderit consectetur laborum. Irure qui consequat veniam labore magna nulla culpa eiusmod et quis nisi esse minim do ad.",
+        "text": "Sunt elit deserunt adipisicing dolore aute labore aliqua esse ipsum. Tempor sunt laborum eiusmod amet culpa sint ex do irure ea. Voluptate veniam ex ullamco Lorem.",
         "spans": []
       }
     ],
     "callToActionLink": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
-    }
+      "url": "https://prismic.io"
+    },
+    "title": "embrace 24/365 platforms"
   }
 }

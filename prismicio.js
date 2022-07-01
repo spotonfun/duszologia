@@ -1,11 +1,11 @@
 import * as prismic from "@prismicio/client";
 import { enableAutoPreviews } from "@prismicio/next";
 import sm from "./sm.json";
-import secret from "./secret.json";
+// import secret from "./secret.json";
 
 export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 console.log(repositoryName);
-const apiToken = secret.apiToken;
+// const apiToken = secret.apiToken;
 
 // Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {

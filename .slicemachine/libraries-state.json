@@ -316,7 +316,7 @@
                     "label": "Quote",
                     "placeholder": "Quote text...",
                     "allowTargetBlank": true,
-                    "single": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,embed"
+                    "single": "paragraph,strong,em"
                   }
                 },
                 "source": {
@@ -342,11 +342,11 @@
               "quote": [
                 {
                   "type": "paragraph",
-                  "text": "Aliquip ullamco ipsum aute id cupidatat dolore excepteur. Nostrud excepteur laboris sint cupidatat deserunt consectetur irure culpa. Eiusmod nulla reprehenderit reprehenderit quis pariatur.",
+                  "text": "Occaecat ipsum mollit est cillum dolore magna amet anim est occaecat nulla nisi. Ea adipisicing pariatur enim reprehenderit adipisicing labore velit occaecat labore cupidatat tempor ut culpa proident. Nostrud ea aliqua nisi commodo excepteur ad sint ipsum anim est.",
                   "spans": []
                 }
               ],
-              "source": "mesh cutting-edge experiences"
+              "source": "benchmark e-business interfaces"
             }
           }
         },
@@ -354,13 +354,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Quote/default/preview.png",
-            "width": 800,
-            "height": 48
-          }
-        }
+        "screenshotPaths": {}
       },
       "subtitle": {
         "library": "slices",
@@ -386,7 +380,7 @@
                     "label": "Title",
                     "placeholder": "This is where it all begins...",
                     "allowTargetBlank": true,
-                    "single": "heading2,heading3,heading4,heading5,heading6,strong,em"
+                    "single": "strong,em"
                   }
                 }
               },
@@ -404,8 +398,8 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Leverage global e-business",
+                  "type": "paragraph",
+                  "text": "Consequat do ex culpa fugiat reprehenderit nostrud fugiat officia laboris velit nostrud. Cupidatat dolore voluptate amet cillum ut nisi incididunt proident culpa est qui dolor consequat esse.",
                   "spans": []
                 }
               ]
@@ -416,7 +410,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Subtitle/default/preview.png",
+            "width": 800,
+            "height": 80
+          }
+        }
       },
       "text": {
         "library": "slices",
@@ -442,7 +442,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "single": "paragraph,preformatted,strong,em,rtl"
                   }
                 }
               },
@@ -461,7 +461,12 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Quis minim id ipsum. Qui occaecat labore exercitation enim incididunt officia dolor ullamco aliqua id est dolor officia. Eiusmod eu esse eiusmod pariatur eu dolore sunt esse elit deserunt do nostrud dolor et qui.",
+                  "text": "Consequat consectetur proident incididunt quis pariatur amet. Commodo qui cupidatat consequat dolor deserunt aliquip eu adipisicing quis Lorem commodo.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Consequat sint occaecat est sunt aute in.",
                   "spans": []
                 }
               ]
@@ -476,7 +481,7 @@
           "default": {
             "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Text/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 152
           }
         }
       }

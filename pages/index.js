@@ -36,14 +36,20 @@ export default function Home({ page, posts, navigation, settings }) {
 						height={80}
 					/>
 				</div>
-				<Bounded size="small" className="text-center text-white">
-					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b">
-						<RichText render={page.data.title} />
+				<Bounded size="small" className="text-center  ">
+					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-mali text-white">
+						title here placeholder
+						{
+							//page.data.title
+						}
+						{
+							//<RichText render={page.data.title} />
+						}
 					</h1>
 				</Bounded>
 
 				<Bounded size="base" className="">
-					<h3 className="text-xl font-light leading-tight text-white italic text-center">
+					<h3 className="text-xl   font-bitter text-center text-white">
 						<RichText render={page.data.welcomeText} />
 					</h3>
 				</Bounded>
@@ -54,7 +60,7 @@ export default function Home({ page, posts, navigation, settings }) {
 				<Bounded size="basic" className="text-center">
 					<button
 						type="button"
-						className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+						className="inline-block px-6 py-2.5 bg-blue-600 text-white  font-mali text-xl uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
 					>
 						<PrismicLink href="/blog">Blog</PrismicLink>
 					</button>
