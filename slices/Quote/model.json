@@ -17,7 +17,7 @@
             "label": "Quote",
             "placeholder": "Quote text...",
             "allowTargetBlank": true,
-            "single": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,embed"
+            "single": "paragraph,strong,em"
           }
         },
         "source": {

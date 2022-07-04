@@ -2,12 +2,6 @@
   "_cts": {
     "blog-post": {},
     "home-page": {
-      "title": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
       "welcomeText": {
         "config": {
           "patternType": "PARAGRAPH",
@@ -42,7 +36,7 @@
         "primary": {
           "title": {
             "config": {
-              "patternType": "HEADING",
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }
@@ -67,7 +61,7 @@
           "text": {
             "config": {
               "patternType": "PARAGRAPH",
-              "blocks": 1
+              "blocks": 2
             }
           }
         }
@@ -93,6 +87,29 @@
     "ContactForm": {
       "default": {
         "primary": {}
+      }
+    },
+    "RecentArticlesList": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "PostLinkWithCustomTitle": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }

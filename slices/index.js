@@ -4,7 +4,9 @@ import BlogText from './BlogText';
 import ContactForm from './ContactForm';
 import Image from './Image';
 import Link from './Link';
+import PostLinkWithCustomTitle from './PostLinkWithCustomTitle';
 import Quote from './Quote';
+import RecentArticlesList from './RecentArticlesList';
 import Subtitle from './Subtitle';
 import Text from './Text';
 
@@ -13,7 +15,9 @@ export {
 	ContactForm,
 	Image,
 	Link,
+	PostLinkWithCustomTitle,
 	Quote,
+	RecentArticlesList,
 	Subtitle,
 	Text,
 };
@@ -23,7 +27,9 @@ export const components = {
 	contact_form: ContactForm,
 	image: Image,
 	link: Link,
+	post_link_with_custom_title: PostLinkWithCustomTitle,
 	quote: Quote,
+	recent_articles_list: RecentArticlesList,
 	subtitle: Subtitle,
 	text: Text,
 };

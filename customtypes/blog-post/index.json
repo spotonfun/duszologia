@@ -44,6 +44,22 @@
           "placeholder": ""
         }
       },
+      "imageSource": {
+        "type": "Text",
+        "config": {
+          "label": "Image Source",
+          "placeholder": "Image source / credits for author"
+        }
+      },
+      "imageSourceRichText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Image Source Rich Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -59,6 +75,9 @@
               "type": "SharedSlice"
             },
             "text": {
+              "type": "SharedSlice"
+            },
+            "post_link_with_custom_title": {
               "type": "SharedSlice"
             }
           }

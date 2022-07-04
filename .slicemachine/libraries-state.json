@@ -292,6 +292,98 @@
           }
         }
       },
+      "post_link_with_custom_title": {
+        "library": "slices",
+        "id": "post_link_with_custom_title",
+        "name": "PostLinkWithCustomTitle",
+        "description": "PostLinkWithCustomTitle",
+        "model": {
+          "id": "post_link_with_custom_title",
+          "type": "SharedSlice",
+          "name": "PostLinkWithCustomTitle",
+          "description": "PostLinkWithCustomTitle",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostLinkWithCustomTitle",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "em,strong,hyperlink"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "postLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Post Link",
+                    "select": "document",
+                    "customtypes": [
+                      "blog-post"
+                    ]
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_link_with_custom_title",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Non laboris tempor do sunt nisi elit excepteur labore aliquip nostrud Lorem fugiat aute. Ex voluptate reprehenderit excepteur proident culpa qui excepteur amet eiusmod aliquip incididunt culpa.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet consequat culpa ex ad veniam amet aute incididunt qui. Deserunt elit reprehenderit exercitation aute sunt ipsum eiusmod. Mollit voluptate consectetur esse.",
+                  "spans": []
+                }
+              ],
+              "postLink": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/PostLinkWithCustomTitle/default/preview.png",
+            "width": 800,
+            "height": 144
+          }
+        }
+      },
       "quote": {
         "library": "slices",
         "id": "quote",
@@ -316,7 +408,7 @@
                     "label": "Quote",
                     "placeholder": "Quote text...",
                     "allowTargetBlank": true,
-                    "single": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,embed"
+                    "single": "paragraph,strong,em"
                   }
                 },
                 "source": {
@@ -342,11 +434,67 @@
               "quote": [
                 {
                   "type": "paragraph",
-                  "text": "Aliquip ullamco ipsum aute id cupidatat dolore excepteur. Nostrud excepteur laboris sint cupidatat deserunt consectetur irure culpa. Eiusmod nulla reprehenderit reprehenderit quis pariatur.",
+                  "text": "Occaecat ipsum mollit est cillum dolore magna amet anim est occaecat nulla nisi. Ea adipisicing pariatur enim reprehenderit adipisicing labore velit occaecat labore cupidatat tempor ut culpa proident. Nostrud ea aliqua nisi commodo excepteur ad sint ipsum anim est.",
                   "spans": []
                 }
               ],
-              "source": "mesh cutting-edge experiences"
+              "source": "benchmark e-business interfaces"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "recent_articles_list": {
+        "library": "slices",
+        "id": "recent_articles_list",
+        "name": "RecentArticlesList",
+        "description": "RecentArticlesList",
+        "model": {
+          "id": "recent_articles_list",
+          "type": "SharedSlice",
+          "name": "RecentArticlesList",
+          "description": "RecentArticlesList",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RecentArticlesList",
+              "primary": {
+                "numberOfArticlesToShow": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Number Of Articles To Show",
+                    "placeholder": ""
+                  }
+                },
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "recent_articles_list",
+            "items": [],
+            "primary": {
+              "numberOfArticlesToShow": 8654,
+              "title": "architect cross-platform experiences"
             }
           }
         },
@@ -356,9 +504,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Quote/default/preview.png",
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/RecentArticlesList/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 24
           }
         }
       },
@@ -386,7 +534,7 @@
                     "label": "Title",
                     "placeholder": "This is where it all begins...",
                     "allowTargetBlank": true,
-                    "single": "heading2,heading3,heading4,heading5,heading6,strong,em"
+                    "single": "strong,em"
                   }
                 }
               },
@@ -404,8 +552,8 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Leverage global e-business",
+                  "type": "paragraph",
+                  "text": "Consequat do ex culpa fugiat reprehenderit nostrud fugiat officia laboris velit nostrud. Cupidatat dolore voluptate amet cillum ut nisi incididunt proident culpa est qui dolor consequat esse.",
                   "spans": []
                 }
               ]
@@ -416,7 +564,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Subtitle/default/preview.png",
+            "width": 800,
+            "height": 80
+          }
+        }
       },
       "text": {
         "library": "slices",
@@ -442,7 +596,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "single": "paragraph,preformatted,strong,em,rtl"
                   }
                 }
               },
@@ -461,7 +615,12 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Quis minim id ipsum. Qui occaecat labore exercitation enim incididunt officia dolor ullamco aliqua id est dolor officia. Eiusmod eu esse eiusmod pariatur eu dolore sunt esse elit deserunt do nostrud dolor et qui.",
+                  "text": "Consequat consectetur proident incididunt quis pariatur amet. Commodo qui cupidatat consequat dolor deserunt aliquip eu adipisicing quis Lorem commodo.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Consequat sint occaecat est sunt aute in.",
                   "spans": []
                 }
               ]
@@ -476,7 +635,7 @@
           "default": {
             "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/Text/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 152
           }
         }
       }

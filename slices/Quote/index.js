@@ -1,31 +1,17 @@
-import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import React from "react";
+import { RichText } from "prismic-reactjs";
+import { PrismicRichText, PrismicText } from "@prismicio/react";
+import { Bounded } from "../../components/Bounded";
 
 const Quote = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <RichText render={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <RichText render={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+	<Bounded size="small">
+		<div className="font-bitter text-left text-xl italic medium">
+			<PrismicRichText field={slice.primary.quote} />
+		</div>
+		<div className="text-right italic font-mali text-xs font-light">
+			{"-" + slice.primary.source}
+		</div>
+	</Bounded>
+);
 
-export default Quote
+export default Quote;
