@@ -1,20 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
 import { createClient } from "../prismicio";
-import { Link, RichText } from "prismic-reactjs";
+import { Link, RichText, Text } from "prismic-reactjs";
 import * as prismicH from "@prismicio/helpers";
 import { Layout } from "../components/Layout";
 import { PrismicLink } from "@prismicio/react";
 import { Bounded } from "../components/Bounded";
 import BlogPostCard from "../components/BlogPostCard";
+import { PrismicText } from "@prismicio/react";
 
 export default function Home({ page, posts, navigation, settings }) {
-	// console.log("page: ", page);
+	console.log("page: ", page);
 	// console.log("posts: ", posts);
 	let logoImgSrc = prismicH.asImageSrc(settings.data.profilePicture);
 	let bkgImgUrl = page.data.backgroundImage.url;
-	// let bkgClassName =
-	// console.log("logoImgSrc: " + logoImgSrc);
 	return (
 		<Layout
 			withHeaderDivider={false}
@@ -38,13 +37,7 @@ export default function Home({ page, posts, navigation, settings }) {
 				</div>
 				<Bounded size="small" className="text-center  ">
 					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-mali text-white">
-						title here placeholder
-						{
-							//page.data.title
-						}
-						{
-							//<RichText render={page.data.title} />
-						}
+						{page.data.title}
 					</h1>
 				</Bounded>
 
@@ -60,7 +53,7 @@ export default function Home({ page, posts, navigation, settings }) {
 				<Bounded size="basic" className="text-center">
 					<button
 						type="button"
-						className="inline-block px-6 py-2.5 bg-blue-600 text-white  font-mali text-xl uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+						className="inline-block px-12 py-2.5 bg-blue-600 text-white  font-mali text-xl uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
 					>
 						<PrismicLink href="/blog">Blog</PrismicLink>
 					</button>
@@ -71,20 +64,20 @@ export default function Home({ page, posts, navigation, settings }) {
 				<Bounded size="small" className="border-b mx-20">
 					&nbsp;
 				</Bounded>
-
-				<Bounded size="base" className="">
-					<h3 className="text-xl font-bold leading-tight text-white italic text-left">
-						Artykuły
-					</h3>
-				</Bounded>
-				<Bounded size="base">
-					<div className="flex flex-row justify-start">
-						<ul>
+				{
+					// blog posts
+				}
+				<Bounded size="wide">
+					<div className="mb-4">
+						<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+							Artykuły
+						</h3>
+					</div>
+					<div>
+						<ul className="flex flex-column justify-start flex-wrap">
 							{posts.map((post) => (
-								<li key={post.uid}>
+								<li key={post.uid} className="pr-4 pb-4">
 									<BlogPostCard post={post} />
-									post: {post.data.title}{" "}
-									<PrismicLink document={post}>link</PrismicLink>
 								</li>
 							))}
 						</ul>
@@ -107,10 +100,12 @@ export async function getStaticProps({ previewData }) {
 	// console.log("navigation:" + navigation);
 	// console.log("settings" + settings);
 
-	const posts = await client.getAllByType("blog-post");
-	// , {
-	// 	orderings: [{ field: "blog-post.date", direction: "desc" }],
-	// });
+	const posts = await client.getAllByType(
+		"blog-post", //);
+		{
+			orderings: [{ field: "blog-post.data.publishDate", direction: "desc" }],
+		}
+	);
 
 	// console.log("page uid:" + page.uid);
 	return {

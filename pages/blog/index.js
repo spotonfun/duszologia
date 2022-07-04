@@ -22,30 +22,26 @@ export default function Blog({ page, posts, navigation, settings }) {
 			<Head>
 				<title>{page.data.title}</title>
 			</Head>
-			<Bounded>
-				<h1 className="text-3xl leading-tight mb-4 pb-4 border-b">
-					{page.data.title}
-				</h1>
-			</Bounded>
-			<Bounded>
-				<p>
+			<Bounded size="wide">
+				<div className="">
+					<h1 className="text-3xl leading-tight mb-0 pb-4 border-b">
+						{page.data.title}
+					</h1>
+				</div>
+				<div className="mt-4">
 					<RichText render={page.data.description}></RichText>
-				</p>
-			</Bounded>
-			<Bounded>
-				<Bounded size="base" className="">
-					<h3 className="text-xl font-bold leading-tight text-white italic text-left">
-						Artykuły
-					</h3>
-				</Bounded>
-				<Bounded size="base">
-					<div className="flex flex-row justify-start">
-						<ul>
+				</div>
+				<Bounded size="wide">
+					<div className="mb-4">
+						<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+							Artykuły
+						</h3>
+					</div>
+					<div>
+						<ul className="flex flex-column justify-start flex-wrap">
 							{posts.map((post) => (
-								<li key={post.uid}>
+								<li key={post.uid} className="pr-4 pb-4">
 									<BlogPostCard post={post} />
-									post: {post.data.title}{" "}
-									<PrismicLink document={post}>link</PrismicLink>
 								</li>
 							))}
 						</ul>
@@ -65,10 +61,12 @@ export async function getStaticProps({ previewData }) {
 	const navigation = await client.getSingle("navigation");
 	const settings = await client.getSingle("settings");
 	console.log(page);
-	const posts = await client.getAllByType("blog-post");
-	// , {
-	// 	orderings: [{ field: "blog-post.date", direction: "desc" }],
-	// });
+	const posts = await client.getAllByType(
+		"blog-post", //);
+		{
+			orderings: [{ field: "blog-post.publishDate", direction: "desc" }],
+		}
+	);
 	return {
 		props: {
 			page,

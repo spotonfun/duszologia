@@ -9,6 +9,8 @@ import { components } from "../../slices";
 import { Layout } from "../../components/Layout";
 import { BackButton } from "../../components/BackButton";
 import { Bounded } from "../../components/Bounded";
+import { PrismicNextImage } from "@prismicio/next";
+// importy PrismicNextImage
 
 const dateFormatter = new Intl.DateTimeFormat("pl-PL", {
 	month: "short",
@@ -46,11 +48,23 @@ export default function BlogPostPage({ post, navigation, settings }) {
 				<title>{post.data.title}</title>
 			</Head>
 
-			<Bounded>
-				<h1>{post.data.title}</h1>
-			</Bounded>
-
 			<article>
+				<div className="">
+					<PrismicNextImage
+						field={post.data.featuredImage}
+						imgixParams={{
+							fit: "clip",
+							crop: "entropy",
+							// w: 1.0,
+							h: 250,
+						}}
+						// className="rounded-t-lg"
+						// src={post.data.featuredImage.url}
+						// alt={post.data.featuredImage.alt}
+
+						// layout="responsive"
+					/>
+				</div>
 				<Bounded className="pb-0">
 					<h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
 						{post.data.title}

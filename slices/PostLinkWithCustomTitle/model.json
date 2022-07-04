@@ -1,0 +1,47 @@
+{
+  "id": "post_link_with_custom_title",
+  "type": "SharedSlice",
+  "name": "PostLinkWithCustomTitle",
+  "description": "PostLinkWithCustomTitle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PostLinkWithCustomTitle",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "em,strong,hyperlink"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "postLink": {
+          "type": "Link",
+          "config": {
+            "label": "Post Link",
+            "select": "document",
+            "customtypes": [
+              "blog-post"
+            ]
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -292,6 +292,98 @@
           }
         }
       },
+      "post_link_with_custom_title": {
+        "library": "slices",
+        "id": "post_link_with_custom_title",
+        "name": "PostLinkWithCustomTitle",
+        "description": "PostLinkWithCustomTitle",
+        "model": {
+          "id": "post_link_with_custom_title",
+          "type": "SharedSlice",
+          "name": "PostLinkWithCustomTitle",
+          "description": "PostLinkWithCustomTitle",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostLinkWithCustomTitle",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "em,strong,hyperlink"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "postLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Post Link",
+                    "select": "document",
+                    "customtypes": [
+                      "blog-post"
+                    ]
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_link_with_custom_title",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Non laboris tempor do sunt nisi elit excepteur labore aliquip nostrud Lorem fugiat aute. Ex voluptate reprehenderit excepteur proident culpa qui excepteur amet eiusmod aliquip incididunt culpa.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet consequat culpa ex ad veniam amet aute incididunt qui. Deserunt elit reprehenderit exercitation aute sunt ipsum eiusmod. Mollit voluptate consectetur esse.",
+                  "spans": []
+                }
+              ],
+              "postLink": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/PostLinkWithCustomTitle/default/preview.png",
+            "width": 800,
+            "height": 144
+          }
+        }
+      },
       "quote": {
         "library": "slices",
         "id": "quote",
@@ -355,6 +447,68 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "recent_articles_list": {
+        "library": "slices",
+        "id": "recent_articles_list",
+        "name": "RecentArticlesList",
+        "description": "RecentArticlesList",
+        "model": {
+          "id": "recent_articles_list",
+          "type": "SharedSlice",
+          "name": "RecentArticlesList",
+          "description": "RecentArticlesList",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RecentArticlesList",
+              "primary": {
+                "numberOfArticlesToShow": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Number Of Articles To Show",
+                    "placeholder": ""
+                  }
+                },
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "recent_articles_list",
+            "items": [],
+            "primary": {
+              "numberOfArticlesToShow": 8654,
+              "title": "architect cross-platform experiences"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/mszpoton/dev/prv/duszologia/.slicemachine/assets/slices/RecentArticlesList/default/preview.png",
+            "width": 800,
+            "height": 24
+          }
+        }
       },
       "subtitle": {
         "library": "slices",
