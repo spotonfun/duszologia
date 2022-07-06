@@ -24,16 +24,16 @@ export default function Blog({ page, posts, navigation, settings }) {
 			</Head>
 			<Bounded size="wide">
 				<div className="">
-					<h1 className="text-3xl leading-tight mb-0 pb-4 border-b">
+					<h1 className="text-3xl leading-tight mb-0 pb-4 border-b text-gray-300">
 						{page.data.title}
 					</h1>
 				</div>
-				<div className="mt-4">
+				<div className="mt-4 text-white">
 					<RichText render={page.data.description}></RichText>
 				</div>
 				<Bounded size="wide">
 					<div className="mb-4">
-						<h3 className="text-xl font-bold leading-tight text-white italic text-left">
+						<h3 className="text-xl font-bold leading-tight text-gray-300 italic text-left">
 							Artykuły
 						</h3>
 					</div>

@@ -36,7 +36,7 @@ export default function Home({ page, posts, navigation, settings }) {
 					/>
 				</div>
 				<Bounded size="small" className="text-center  ">
-					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-mali text-white">
+					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-arima text-white">
 						{page.data.title}
 					</h1>
 				</Bounded>
