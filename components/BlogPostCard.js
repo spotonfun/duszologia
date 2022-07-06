@@ -12,7 +12,7 @@ export default function BlogPostCard({ post }) {
 
 	return (
 		<div className="flex justify-center">
-			<div className="relative flex flex-col justify-center rounded-lg shadow-lg bg-violet-300 w-[270px]">
+			<div className="relative flex flex-col justify-center rounded-lg shadow-lg bg-purple650 w-[270px]">
 				<PrismicLink document={post}>
 					<Image
 						className="rounded-t-lg"
@@ -24,15 +24,15 @@ export default function BlogPostCard({ post }) {
 					/>
 				</PrismicLink>
 				<div className="p-6 h-56 flex flex-col">
-					<h5 className="text-gray-900 text-xl font-medium mb-2">
+					<h5 className="text-purple100 text-xl font-medium mb-2">
 						{post.data.title}
 					</h5>
-					<div className="text-gray-700 text-base mb-4 flex flex-1 ">
+					<div className="text-gray-300 text-base mb-4 flex flex-1 ">
 						<p className="break-normal truncate">{post.data.incentive}</p>
 					</div>
 					<button
 						type="button"
-						className=" inline-block px-6 py-2.5 bg-violet-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+						className=" inline-block px-6 py-2.5 bg-purple400 text-gray-300 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple250 hover:shadow-lg focus:bg-purple250 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple250 active:shadow-lg transition duration-150 ease-in-out"
 					>
 						<PrismicLink document={post}>Czytaj dalej...</PrismicLink>
 					</button>

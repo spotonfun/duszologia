@@ -30,8 +30,8 @@ export const Header = ({
 		<nav
 			className={
 				withBackground
-					? "bg-purple650 relative w-full  flex flex-wrap items-center justify-between py-4 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light "
-					: "bg-transparent relative w-full  flex flex-wrap items-center justify-between py-4 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light"
+					? "bg-purple950 relative w-full  flex flex-wrap items-center justify-between py-4 text-purple150 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light "
+					: "bg-transparent relative w-full  flex flex-wrap items-center justify-between py-4 text-purple150 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light"
 			}
 		>
 			<div className="container-fluid w-full flex-wrap items-center justify-between px-6">
@@ -41,7 +41,7 @@ export const Header = ({
 							href="/"
 							className={
 								withBackground
-									? "nav-link text-white hover:text-gray-400 focus:text-gray-400 p-0"
+									? "nav-link text-purple150 hover:text-gray-400 focus:text-gray-400 p-0"
 									: "nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
 							}
 						>
@@ -54,7 +54,7 @@ export const Header = ({
 								field={item.link}
 								className={
 									withBackground
-										? "nav-link text-white hover:text-gray-400 focus:text-gray-400 p-0"
+										? "nav-link text-text-purple150 hover:text-gray-400 focus:text-gray-400 p-0"
 										: "nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
 								}
 							>

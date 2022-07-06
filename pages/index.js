@@ -8,6 +8,7 @@ import { PrismicLink } from "@prismicio/react";
 import { Bounded } from "../components/Bounded";
 import BlogPostCard from "../components/BlogPostCard";
 import { PrismicText } from "@prismicio/react";
+import HeaderFontLoader from "../components/HeaderFontLoader";
 
 export default function Home({ page, posts, navigation, settings }) {
 	console.log("page: ", page);
@@ -24,15 +25,16 @@ export default function Home({ page, posts, navigation, settings }) {
 		>
 			<Head>
 				<title>{settings.data.name}</title>
+				<HeaderFontLoader />
 			</Head>
-			<div className="container mx-0 my-0 max-w-full h-auto">
-				<div className="relative text-center">
+			<div className="container mx-0 my-0 max-w-full h-auto text-center">
+				<div className="relative text-center max-w-[350px] justify-center m-auto">
 					<Image
 						src={logoImgSrc}
 						alt={settings.data.profilePicture.alt}
-						layout="intrinsic"
-						width={246}
-						height={80}
+						layout="responsive"
+						width={350}
+						height={123}
 					/>
 				</div>
 				<Bounded size="small" className="text-center  ">
@@ -42,7 +44,7 @@ export default function Home({ page, posts, navigation, settings }) {
 				</Bounded>
 
 				<Bounded size="base" className="">
-					<h3 className="text-xl   font-bitter text-center text-white">
+					<h3 className="text-xl font-bitter text-center text-white">
 						<RichText render={page.data.welcomeText} />
 					</h3>
 				</Bounded>
@@ -53,7 +55,7 @@ export default function Home({ page, posts, navigation, settings }) {
 				<Bounded size="basic" className="text-center">
 					<button
 						type="button"
-						className="inline-block px-12 py-2.5 bg-blue-600 text-white  font-mali text-xl uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+						className="inline-block px-12 py-2.5 bg-purple800 text-white  font-mali text-xl uppercase rounded-full shadow-md hover:bg-purple450 hover:shadow-lg focus:bg-purple450 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
 					>
 						<PrismicLink href="/blog">Blog</PrismicLink>
 					</button>

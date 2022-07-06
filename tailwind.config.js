@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,12 +11,12 @@ module.exports = {
 		// },
 		extend: {
 			fontFamily: {
-				mali: ["Mali", "sans-serif"],
-				grandstander: ["Grandstander", "sans-serif"],
-				bitter: ["Bitter", "serif"],
-				scopeOne: ["Scope One", "serif"],
-				spectral: ["Spectral", "serif"],
-				arima: ["Arima", "serif"],
+				mali: ["Mali", ...defaultTheme.fontFamily.sans],
+				grandstander: ["Grandstander", ...defaultTheme.fontFamily.sans],
+				bitter: ["Bitter", ...defaultTheme.fontFamily.sans],
+				scopeOne: ["Scope One", ...defaultTheme.fontFamily.serif],
+				spectral: ["Spectral", ...defaultTheme.fontFamily.serif],
+				sans: ["Arima", ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
 				purple100: "#D8B3DD",
