@@ -3,6 +3,7 @@ import { PrismicProvider } from "@prismicio/react";
 import { linkResolver, repositoryName } from "../prismicio";
 import Link from "next/link";
 import "../styles/globals.css";
+import "./_app.css";
 
 function MyApp({ Component, pageProps }) {
 	return (

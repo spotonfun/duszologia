@@ -9,14 +9,18 @@ module.exports = {
 		// 	sans: ["Grandstander", "sans-serif"],
 		// 	serif: ["Bitter", "serif"],
 		// },
+		fontFamily: {
+			serif: ["Mali", ...defaultTheme.fontFamily.serif],
+			sans: ["Arima", ...defaultTheme.fontFamily.sans],
+		},
 		extend: {
 			fontFamily: {
-				mali: ["Mali", ...defaultTheme.fontFamily.sans],
+				mali: ["Mali", ...defaultTheme.fontFamily.serif],
 				grandstander: ["Grandstander", ...defaultTheme.fontFamily.sans],
 				bitter: ["Bitter", ...defaultTheme.fontFamily.sans],
 				scopeOne: ["Scope One", ...defaultTheme.fontFamily.serif],
 				spectral: ["Spectral", ...defaultTheme.fontFamily.serif],
-				sans: ["Arima", ...defaultTheme.fontFamily.serif],
+				arima: ["Arima", ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				purple100: "#D8B3DD",

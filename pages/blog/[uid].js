@@ -49,19 +49,21 @@ export default function BlogPostPage({ post, navigation, settings }) {
 			</Head>
 
 			<article>
-				<div className="">
+				<div className="m-auto max-h-150">
 					<PrismicNextImage
 						field={post.data.featuredImage}
 						imgixParams={{
-							fit: "clip",
-							crop: "entropy",
-							// w: 1.0,
-							h: 250,
+							fit: "fillmax",
+							fill: "solid",
+							// crop: "entropy",
+
+							// h: 150,
 						}}
 						// className="rounded-t-lg"
 						// src={post.data.featuredImage.url}
 						// alt={post.data.featuredImage.alt}
-
+						width="100%"
+						height="150"
 						// layout="responsive"
 					/>
 				</div>

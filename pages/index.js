@@ -8,7 +8,7 @@ import { PrismicLink } from "@prismicio/react";
 import { Bounded } from "../components/Bounded";
 import BlogPostCard from "../components/BlogPostCard";
 import { PrismicText } from "@prismicio/react";
-import HeaderFontLoader from "../components/HeaderFontLoader";
+// import HeaderFontLoader from "../components/HeaderFontLoader";
 
 export default function Home({ page, posts, navigation, settings }) {
 	console.log("page: ", page);
@@ -25,7 +25,6 @@ export default function Home({ page, posts, navigation, settings }) {
 		>
 			<Head>
 				<title>{settings.data.name}</title>
-				<HeaderFontLoader />
 			</Head>
 			<div className="container mx-0 my-0 max-w-full h-auto text-center">
 				<div className="relative text-center max-w-[350px] justify-center m-auto">
@@ -38,13 +37,13 @@ export default function Home({ page, posts, navigation, settings }) {
 					/>
 				</div>
 				<Bounded size="small" className="text-center  ">
-					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-arima text-white">
+					<h1 className="text-7xl leading-tight mb-4 pb-4 border-b font-serif text-white">
 						{page.data.title}
 					</h1>
 				</Bounded>
 
 				<Bounded size="base" className="">
-					<h3 className="text-xl font-bitter text-center text-white">
+					<h3 className="text-xl font-sans text-center text-white">
 						<RichText render={page.data.welcomeText} />
 					</h3>
 				</Bounded>
