@@ -6,8 +6,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,6 +15,18 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Prismic.io content
+
+To run slice machine server:
+
+```bash
+npm run slicemachine
+```
+
+Open [http://localhost:9999](http://localhost:9999) with the prismic.io slice machine.
+
+The content manager is under [https://duszologia.prismic.io/](https://duszologia.prismic.io/) - you can add / edit content there
 
 ## Learn More
 
